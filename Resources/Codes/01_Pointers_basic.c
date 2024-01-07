@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+//
 int main()
 {
     int x = 10;
@@ -19,6 +20,13 @@ int main()
     // Next statement if executed will give "Segmentation fault (core dumped)" error
     // printf("ptr3 points at value = %d, stores (address of variable x) = %p and itself is stored at location = %p\n",*ptr3,ptr3,&ptr3);
     // ptr4(void type) points to variable x
+
+/********************using void ptr to point int *******************/
+//     val1           // void pointer - not dereferenceable
+// (int *)val1    // pointer to 'int'
+// *(int *)val1   // the 'int' being pointed to
+
+
     ptr4 = &x;
     printf("ptr4(void type) points to variable x(int type)\n");
     printf("ptr4 points at value = %d, stores (address of variable x) = %p and itself is stored at location = %p\n",*(int*)ptr4,ptr4,&ptr4);
@@ -27,7 +35,8 @@ int main()
     printf("ptr4(void type) points to variable y(int type)\n");
     printf("ptr4 points at value = %d, stores (address of variable x) = %p and itself is stored at location = %p\n",*(int*)ptr4,ptr4,&ptr4);
     
-    if(ptr3)
+    // if(ptr3==NULL)//ptr3 is pointing Null but it is not null
+    if(ptr3)//ptr3 is pointing Null but it is not null
     {
         printf("ptr3 is NULL\n");
     }
@@ -50,3 +59,12 @@ ptr4(void type) points to variable y(int type)
 ptr4 points at value = 20, stores (address of variable x) = 0x7ffc3c757864 and itself is stored at location = 0x7ffc3c757878
 ptr3 is not NULL
 */
+
+
+
+
+
+
+
+
+
